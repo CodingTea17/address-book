@@ -6,7 +6,7 @@ function Contact(first, last) {
 
 // Frontend Logic
 $(document).ready(function() {
-  $("form#new-contact").submit(function(event) {
+  $("form#new-contact-info").submit(function(event) {
     event.preventDefault();
 
     var inputtedFirstName = $("input#new-first-name").val();
@@ -14,7 +14,7 @@ $(document).ready(function() {
 
     var newContact = new Contact(inputtedFirstName, inputtedLastName);
 
-    $("ul#contacts").append("<li><span class='contact'") + newContact.firstName + "</span></li>");
+    $("ul#contacts").append("<li><span class='contact'>" + newContact.firstName + "</span></li>");
 
     $(".contact").last().click(function() {
       $("#show-contact").show();
